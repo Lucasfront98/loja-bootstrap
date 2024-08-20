@@ -1,0 +1,192 @@
+*{  
+    box-sizing: border-box;
+    margin: 0 ;
+    padding: 0 ;
+    font-family: roboto, sans-serif;
+    background-color: #ccc;
+}
+
+.container{
+    max-width: 1120px;
+    width: 100%;
+    margin: 0 auto;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header img{
+    height: 72px;
+}
+header input{
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 6px;
+}
+header button{
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 6px;
+    color: #fff;
+    background-color: black;
+}
+header{
+    padding-top: 16px 0 0;
+    border-bottom: 1px #cccc;
+
+}
+
+.submenu{
+    display: none;
+    border: 2px solid transparent;
+    background-color: #ccc;
+    position: absolute;
+    left: 0;
+    width: 100px;
+    top: 100%;
+    font-size: 16px;
+}
+.menu > li{
+    font-size: 1.2em;
+    float: left;
+    list-style: none;
+    padding: 16px 8px;
+    border-top: 4px solid transparent;
+    position: relative;
+    cursor: pointer;
+}
+.clear{
+    clear: both;
+}
+.menu li:hover .submenu{
+    display: block;
+    border-top: 4px solid black;
+    padding-top: 8px;
+    
+    
+}
+.submenu li {
+    display: block;
+    padding-top: 8px;
+}
+.submenu li > a{
+    padding: 12px;
+    text-decoration: none;
+    color: black;
+}
+section img{
+    height: 350px;
+}
+.sobre{
+    padding-top:80px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    font-size: 1.8em;
+}
+.sobre h2{
+    border-bottom: 2px solid black;
+}
+.item{
+    align-items: center;
+    display: block;
+    padding: 8px 0;
+    text-align: center;
+}
+.item button{
+    justify-content: center;
+    width: 33%;
+    text-align: center;
+    height: 32px;
+    background-color: black;
+    color: #fff;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+
+}
+.produtos img{
+    width: 220px;
+    height: 220px;
+}
+.produtos{
+    padding: 18px;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(4, 22%);
+    
+}
+.item a{
+    color: black;
+    text-decoration: none;
+}
+.item a h3{
+    padding: 16px 0;
+}
+
+
+@media  screen and (max-width: 640px) {
+    .container{
+        max-width: 90%;
+    }
+    
+    header .container{
+        flex-direction: column;
+        padding: 12px 0;
+    }
+    .botao-menu{
+        display: flex;
+        justify-content: center;
+        margin-top: 16px;
+        padding-bottom: 16px;
+    }
+    .botao-menu button{
+        padding: 8px;
+    }
+    nav ul{
+        display: none;
+    }
+    .sobre img{
+        align-items: center;
+    }
+    .sobre{
+        font-size: 1.5em;
+        display: block;
+        padding: 16px 0;
+        
+    }
+    .produtos{
+        display: block;
+    }
+    .menu{
+        display:none;
+        
+            
+    }
+    
+}
+
+@media screen and (min-width: 641px) and (max-width: 1023px){
+    .container{
+        max-width: 90%;
+    }
+    .sobre img{
+        align-items: center;
+    }
+    .sobre{
+        display: block;
+    }
+    .botao-menu{
+        display: none;
+    }
+    .produtos{
+        display: grid;
+        grid-template-columns: repeat(2, 44%);
+    }
+}
+@media  screen and (min-width: 1024px) { 
+    .botao-menu{
+        display: none;
+    }
+    
+}
